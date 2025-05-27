@@ -1,0 +1,3 @@
+get color base defined in style.css
+code content inside the container class already defined 
+project using bootstrap 4, jquery,....

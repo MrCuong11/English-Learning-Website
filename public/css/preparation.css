@@ -1,0 +1,411 @@
+/* ================================
+   Wrapper chính & Badge remaining
+================================ */
+.preparation-task-wrapper {
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .preparation-task-remaining {
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    background-color: #e6f7fc;
+    color: #333;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+  
+  /* ================================
+     Tiêu đề & Hướng dẫn
+  ================================ */
+  .preparation-task-title {
+    color: #688d00;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .preparation-task-instruction {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  /* ================================
+     Khung chứa các chữ cái
+  ================================ */
+  .preparation-task-letters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    background-color: #eef2f2;
+    padding: 16px;
+    border-radius: 8px;
+  }
+  
+  .preparation-task-letter,
+  .preparation-task-box {
+    width: 60px;
+    height: 60px;
+    display: inline-flex;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 6px;
+    font-size: 24px;
+    font-weight: bold;
+    box-sizing: border-box;
+  }
+  
+  .preparation-task-letter {
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  }
+  
+  .preparation-task-letter::after {
+    content: "👇";
+    position: absolute;
+    top: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+  }
+  
+  /* ================================
+     Hàng nhập đáp án & nút audio
+  ================================ */
+  .preparation-task-answer-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+  
+  .preparation-task-audio {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: 2px solid #000;
+    background-color: #fff;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .preparation-task-audio i {
+    font-size: 16px;
+    color: #000;
+  }
+  
+  /* ================================
+     Thanh tiến trình (dots)
+  ================================ */
+  .preparation-task-progress {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .preparation-task-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #b0c62d;
+    opacity: 0.7;
+  }
+  
+  .preparation-task-dot.active {
+    background-color: #507c00;
+    opacity: 1;
+  }
+  
+  /* ================================
+     Nút điều hướng trái/phải
+  ================================ */
+  .preparation-task-nav-arrows {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin: 10px 0 20px;
+  }
+  
+  .preparation-task-arrow-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background-color: #f1f2f3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .preparation-task-arrow-btn:hover {
+    background-color: #e0e1e2;
+  }
+  
+  .preparation-task-arrow-btn i {
+    font-size: 16px;
+    color: #6b8e23;
+  }
+  
+  /* ================================
+     Nút Finish & Try Again
+  ================================ */
+  .preparation-task-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .preparation-task-btn i {
+    font-size: 14px;
+  }
+  
+  .preparation-task-finish-btn {
+    background-color: #e6f2d1;
+    color: #6b8e23;
+  }
+
+  /* Màu khi bị khóa (đậm hơn) */
+.preparation-task-finish-btn.locked:disabled {
+  background-color: #c6d9a0; /* Màu đậm hơn */
+  color: #6b8e23;
+  opacity: 1; /* Đảm bảo nút không bị mờ mặc dù disabled */
+  cursor: not-allowed;
+}
+  
+  .preparation-task-finish-btn:hover {
+    background-color: #d4e9b2;
+  }
+  
+  .preparation-task-retry-btn {
+    background-color: #f0f3e8;
+    color: #6b8e23;
+  }
+
+  .preparation-task-btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+  
+  .preparation-task-retry-btn:hover {
+    background-color: #e1e5d7;
+  }
+  
+  .preparation-task-bottom-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0 10px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .preparation-task-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+
+  .preparation-task-letter::after {
+    content: "👇";
+    position: absolute;
+    top: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+  }
+  
+  .preparation-task-letter.no-arrow::after {
+    content: none;
+  }
+  
+  .preparation-task-question {
+    display: none;
+}
+
+.preparation-task-question.active {
+    display: block;
+}
+
+
+.preparation-task-wrapper {
+  position: relative;
+}
+
+
+.preparation-task-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Mờ nền */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.preparation-task-modal {
+  background: #fff;
+  padding: 20px 25px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.preparation-modal-text {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.preparation-modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.preparation-modal-btn {
+  padding: 6px 16px;
+  border: solid 1px transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+
+
+.preparation-modal-confirm {
+  background-color: #28a745;
+  color: white;
+}
+
+.preparation-modal-cancel {
+  background-color: #dc3545;
+  color: white;
+}
+
+
+/* Định dạng cho chữ cái đúng (màu xanh) */
+.preparation-task-letter.correct {
+  background-color: #61f17c !important; /* Màu xanh đậm */
+  color: #ffffff !important; /* Màu trắng để tương phản */
+}
+
+/* Định dạng cho chữ cái sai (màu đỏ) */
+.preparation-task-letter.incorrect {
+  background-color:#f77d6c !important; /* Màu đỏ đậm */                                                                                
+  color: #ffffff !important; /* Màu trắng để tương phản */
+}
+
+/* Nút Yes của modal Finish */
+.preparation-confirm-yes {
+  background-color: #28a745;
+  color: white;
+}
+
+/* Nút No của modal Finish */
+.preparation-confirm-no {
+  background-color: #dc3545;
+  color: white;
+}
+
+.preparation-task-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+  background-color: #f6f8fa;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.prep-draggable {
+  padding: 8px 12px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: grab;
+  user-select: none;
+  font-size: 16px;
+  text-align: center;
+  min-width: 120px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: background-color 0.2s;
+  margin-bottom: 8px;
+}
+.prep-draggable:hover {
+  background-color: #eef1f5;
+}
+.preparation-task-groups {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.prep-group {
+  width: 48%;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  min-height: 250px;
+}
+.prep-group-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.prep-dropzone {
+  min-height: 180px;
+  background-color: #fff;
+  border: 2px dashed #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.prep-draggable.selected {
+  background-color: #d0e6ff;
+  border-color: #3399ff;
+}
+/* Badge giống ảnh mẫu */
+.items-remaining-badge {
+  position: absolute;
+  top: 60px;
+  right: 30px;
+  background-color: #e6f7fc;
+  color: #333;
+  width: 150px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 5px;
+  font-size: 12px;
+}
